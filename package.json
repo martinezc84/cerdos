@@ -24,7 +24,7 @@
     "gatsby-plugin-sharp": "^2.0.14",
     "gatsby-source-filesystem": "^2.0.8",
     "gatsby-transformer-sharp": "^2.1.8",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.13",
     "netlify-identity-widget": "^1.5.2",
     "prop-types": "^15.6.2",
     "react": "^16.8.6",
