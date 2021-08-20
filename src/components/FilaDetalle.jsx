@@ -72,29 +72,7 @@ export default class FilaDetalle extends Component {
 					name="cantidad"
 					value={cantidad}
 					onChange={this.handleInputChange}
-<<<<<<< HEAD
 					className="inputform"
-=======
-					onKeyDown={(event)=>{
-						//console.log(event.keyCode);
-						if(event.keyCode === 13){
-							this.props.agregarlinea(this.state.code,fila.id)
-							console.log(this.state.code);
-
-						}
-
-						if(event.keyCode === 9){
-							this.props.editarlinea(this.state.code,fila.id)
-							console.log(this.state.code);
-
-						}
-						
-					}}
-                    className="inputform"
-                  />
-					</Table.Cell>
-					
->>>>>>> d09db81b9b3c83247eb0dc2ae19b7dccb85d57a8
 					
 		  			/>
 			

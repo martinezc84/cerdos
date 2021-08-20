@@ -310,67 +310,6 @@ export default class UnpaidInvoices extends Component {
 		
 	  }
 
-<<<<<<< HEAD
-=======
-	  generar_mandados = async ({  vendedoresseleccionados, vendedoresseleccionadosid, seleccionadosId,seleccionados,  }) => {
-		await this.setStateAsync({ operando: true });
-		this.setState({
-			loading: true
-		});
-	
-		// Ciclo de llamadas
-		for (let seleccionado of seleccionados) {
-			try {
-				//console.log(seleccionado.id)
-				let mensajero = []
-				mensajero = this.state.vendedoresseleccionados.filter((s) => s.id == seleccionado.id);
-				let fecha = this.state.fechas.filter((s) => s.id == seleccionado.id);
-
-				if(fecha.length==0){
-					const data = {dte:this.state.date,id:seleccionado.id}
-					fecha[0] = data
-				}
-				
-				//console.log(mensajero)
-				// @ts-ignore
-				let nombre  = this.get_empleado(mensajero[0].value)
-				//console.log(nombre)
-				//console.log(fecha)
-				let fechastr = fecha[0].dte.toLocaleDateString('en-US');
-				let horastr = fecha[0].dte.getHours();
-				let minutes = fecha[0].dte.getMinutes();
-				console.log(fechastr)
-				console.log(minutes)
-				fecha = fechastr.split('/');
-				fechastr = fecha[2]+'/'+fecha[0]+'/'+fecha[1]
-				const posttext = '{"fecha": "'+fechastr+'", "hora": "'+horastr+':'+minutes+':00",  "cliente":"'+seleccionado.ven+'","payee_id":"'+seleccionado.venid+'"   ,"descripcion":"Recolecta","tipo":"5","user":"'+this.state.userdata.username+'", "employee_id":"'+mensajero[0].value+'","store_id":"'+this.state.userdata.store+'","encargado":"'+nombre.text+'", "active":"1", "zauru_id":"'+seleccionado.id+'"}'
-				//console.log(posttext)
-
-				const data = await Axios.post(ENDPOINTS.guardarmandados, posttext);
-				//console.log(data)
-			} catch (error) {
-				console.error({ error });
-				
-			} finally {
-				this.setState({
-					loading: false,
-					visible:true
-				});
-			
-			
-			}
-		}
-		
-		};
-		
-		onConfirm = ()=>{
-			this.setState({				
-				visible:false
-			});
-			navigate('/app/manados/')
-		}
-
->>>>>>> d09db81b9b3c83247eb0dc2ae19b7dccb85d57a8
 	render() {
 		let {
 			Invoices,
