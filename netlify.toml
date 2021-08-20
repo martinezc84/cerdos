@@ -5,14 +5,10 @@
 
 [build.environment]
   # Dominio del sitio de producción (Frontend)
-
 	GATSBY_URL= 'https://peaceful-bose-dc9cbb.netlify.app'
 	#GATSBY_URL= 'http://localhost:9000'
 	GATSBY_PRODUCTION='3083'
 	GATSBY_DESCARTE='3087'
-	GATSBY_NFUNC_URL_PREFIX= 'https://heuristic-jang-ecc928.netlify.app'
-	
-
 	# Locations de las netlify functions (Backend) 
 	# Son los mismos nombres de los archivos que hay en la carpeta /src/service
   

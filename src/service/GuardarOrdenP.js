@@ -1,18 +1,10 @@
 //@ts-check
 import axios from 'axios';
-<<<<<<< HEAD
 import { headers, APIP_URL } from '../utils/utils';
 import format from 'date-fns/format';
 import subHours from 'date-fns/sub_hours';
 import JSON from 'circular-json';
 const URL = APIP_URL.guardarorden;
-=======
-import { headers, URLS } from '../utils/utils';
-import format from 'date-fns/format';
-import subHours from 'date-fns/sub_hours';
-import JSON from 'circular-json';
-
->>>>>>> d09db81b9b3c83247eb0dc2ae19b7dccb85d57a8
 const headersr = {
 	'Access-Control-Allow-Origin': '*',
 	'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
@@ -28,11 +20,7 @@ exports.handler = (event, context, callback) => {
 	}
 	console.log(event.body);
 	
-<<<<<<< HEAD
 	
-=======
-	let URL = 'https://dcgse.com/calendario_api/apiprod/guardarordenp';
->>>>>>> d09db81b9b3c83247eb0dc2ae19b7dccb85d57a8
 	
 	return axios
 		.post(URL, event.body, { headers: headers })
@@ -46,11 +34,7 @@ exports.handler = (event, context, callback) => {
 		})
 		.catch((error) => ({
 			statusCode: 422,
-<<<<<<< HEAD
 			body: `Oops! Something went wrong. ${error.response.data}`,
-=======
-			body: `Oops! Something went wrong. ${error}`,
->>>>>>> d09db81b9b3c83247eb0dc2ae19b7dccb85d57a8
 			headers:headersr,
 		}));
 };

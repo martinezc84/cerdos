@@ -4,9 +4,6 @@ import mandadostyles from '../css/mandados.css';
 import {  Checkbox, Label, Button, Icon } from 'semantic-ui-react';
 import ImageBox from '../components/ImageBox'
 import UploadBox from '../components/uploadbox'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
-
 // Functional Component
 export default class SortableList extends Component {
 cambiar=(id, tipo)=>{
@@ -40,12 +37,11 @@ render(){
     } = this.props;
    
     const listItems = items.map(val => (
-    
-
     <li className={(val.tipo == 1) ? 'cobro' : (val.tipo == 3) ? 'soporte':(val.tipo == 5) ? 'compra':''} key={uniqueId()}  data-id={val.id}>
-    {val.listorder} )  Hora: {val.hora} Descripción: {val.descripcion} Cliente: {val.cliente} Dirección: {val.address} <strong>Nota:</strong>{(val.nota!=null ) ?  val.nota :('')}
-      {val.hora_inicio !== null ?(' Hora de inicio'+val.hora_inicio):('')  }
-        <a href={'tel:'+val.numberphone} style={{fontSize:'25px'}}  > <FontAwesomeIcon icon={faWhatsapp}/>Llamar</a>
+    {val.listorder} )Hora: {val.hora} Descripción: {val.descripcion} Cliente: {val.cliente} <strong>Nota:</strong>{(val.nota!=null ) ?  val.nota :('')}
+      {val.hora_inicio !== null ?(' Hora de inicio'+val.hora_inicio):('')}
+
+
     {val.time == 1 && val.hora_inicio != null ?(
     <Checkbox
    
@@ -108,7 +104,6 @@ render(){
 Ingresar Bultos
 <Button.Content  >
 </Button.Content>
-
 </Button>
     
     ) :('')

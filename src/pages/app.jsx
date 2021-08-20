@@ -17,7 +17,6 @@ import Existencias from '../components/Existencias';
 import OrdenesCompra from '../components/PurchaseOrders';
 import OrdenCompra from '../components/PurchaseDetail';
 import Transfer from '../components/Transfer';
-import Pesarcerdo from '../components/Pesarcerdo';
 import Alimentar from '../components/Alimentar';
 import CerdosNuevos from '../components/CerdosNuevos';
 import Login from '../components/Login';
@@ -27,6 +26,7 @@ import { Container } from 'semantic-ui-react';
 import Axios from 'axios';
 import { ZAURU, FUNCIONES } from '../utils/utils';
 import { isLoggedIn, logout , getUser} from "../utils/identity"
+import Pesarcerdo from '../components/Pesarcerdo';
 
 
 export default class App extends Component {
@@ -531,7 +531,6 @@ export default class App extends Component {
 			<RutaPrivada  path="/app/existencias" component={Existencias} guardar={this.guardar} {...propson}  ></RutaPrivada>
 			<RutaPrivada  path="/app/cerdosnuevos" component={CerdosNuevos} guardar={this.guardar} {...propson}  ></RutaPrivada>
 			<RutaPrivada  path="/app/pesarcerdos" component={Pesarcerdo} guardar={this.guardar} {...propstrans}  ></RutaPrivada>
-			
 				<Login path='/app/login/:error' />
 				
 				

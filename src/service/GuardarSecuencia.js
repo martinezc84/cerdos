@@ -1,13 +1,7 @@
 //@ts-check
 import axios from 'axios';
-<<<<<<< HEAD
 import { headers, APIP_URL } from '../utils/utils';
 const URL = APIP_URL.guardarsecuencia;
-=======
-import { headers, URLS } from '../utils/utils';
-import format from 'date-fns/format';
-import subHours from 'date-fns/sub_hours';
->>>>>>> d09db81b9b3c83247eb0dc2ae19b7dccb85d57a8
 import JSON from 'circular-json';
 
 const headersr = {
@@ -25,11 +19,6 @@ exports.handler = (event, context, callback) => {
 	}
 	console.log(event.body);
 	
-<<<<<<< HEAD
-=======
-	let URL = 'https://dcgse.com/calendario_api/apiprod/guardarsecuencia';
-	
->>>>>>> d09db81b9b3c83247eb0dc2ae19b7dccb85d57a8
 	return axios
 		.post(URL, event.body, { headers: headers })
 		.then((data) => {
