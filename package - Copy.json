@@ -10,9 +10,11 @@
     "@ionic-native/vibration": "^5.4.0",
     "@material-ui/core": "^4.11.2",
     "@material-ui/icons": "^4.11.2",
-
+<<<<<<< HEAD
+    "axios": "^0.18.0",
+=======
     "axios": "^0.21.1",
-
+>>>>>>> d09db81b9b3c83247eb0dc2ae19b7dccb85d57a8
     "circular-json": "^0.5.9",
     "date-fns": "^1.30.1",
     "dotenv": "^6.2.0",
@@ -28,11 +30,15 @@
     "gatsby-plugin-sentry": "^1.0.1",
     "gatsby-plugin-sharp": "^2.6.26",
     "gatsby-source-filesystem": "^2.0.8",
-
+<<<<<<< HEAD
+    "gatsby-transformer-sharp": "^2.1.8",
+    "ionic-native": "^2.9.0",
+    "lodash": "^4.17.11",
+=======
     "gatsby-transformer-sharp": "^2.3.2",
     "ionic-native": "^2.9.0",
     "lodash": "^4.17.21",
-
+>>>>>>> d09db81b9b3c83247eb0dc2ae19b7dccb85d57a8
     "netlify-identity-widget": "^1.5.2",
     "node": "^15.3.0",
     "prop-types": "^15.6.2",
@@ -52,9 +58,10 @@
     "react-message-box": "^1.0.6",
     "react-modal-image": "^2.3.2",
     "react-modern-datepicker": "^1.1.0",
-
+<<<<<<< HEAD
+=======
     "react-router": "^5.2.0",
-
+>>>>>>> d09db81b9b3c83247eb0dc2ae19b7dccb85d57a8
     "react-signature-canvas": "^1.0.1",
     "react-signature-pad-wrapper": "^1.2.4",
     "react-sortable-hoc": "^1.8.3",
@@ -68,7 +75,10 @@
     "sortablejs": "^1.6.1",
     "sweetalert2": "^8.2.6",
     "tailwindcss": "^0.7.3",
-
+<<<<<<< HEAD
+=======
+    "throttle-debounce": "^3.0.1",
+>>>>>>> d09db81b9b3c83247eb0dc2ae19b7dccb85d57a8
     "type-fest": "^0.20.2",
     "webpack-plugin-serve": "^1.2.1"
   },
