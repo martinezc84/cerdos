@@ -454,15 +454,16 @@ Selectequipo = (e, item) => {
 					let x=0
 					
 					let lot_id
+					let lotinfo
 					let stringdet="{"
 					let insumos = this.state.insumos
 					for (let linea in insumos){
 						if(x>0) stringdet+=","
 						if(insumos[linea].lote!=""){ 
-							lot_id = await Axios.get(FUNCIONES.lote+'?id='+insumos[linea].lote+"&item_id="+insumos[linea].item_id)
-							lot_id = lot_id.data.id
+							lotinfo = await Axios.get(FUNCIONES.lote+'?id='+insumos[linea].lote+"&item_id="+insumos[linea].item_id)
+							lot_id = lotinfo.data.id
 							let pesoactual = insumos[linea].booked_quantity
-							insumos[linea].booked_quantity= insumos[linea].booked_quantity - lot_id.data.pesoactual
+							insumos[linea].booked_quantity= insumos[linea].booked_quantity - lotinfo.data.pesoactual
 							Axios.post(FUNCIONES.editarlote,'{"id":"'+lot_id+'","pesoactual":"'+pesoactual+'"}')
 							Axios.post(FUNCIONES.guardarloteag,'{"lote_id":"'+lot_id+'","cantidad":"'+pesoactual+'","agencia_id":"'+this.state.to_agency+'"}')
 					   }else{ 
