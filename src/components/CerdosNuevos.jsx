@@ -301,7 +301,7 @@ export default class CerdosNuevos extends Component {
 					let lineas = this.state.lineas
 					for (let linea in lineas){
 
-						let data={store_id:this.state.userdata.store, item_id:47395, customer_id:288956,description:"INGRESO LECHONES"}
+						let data={store_id:this.state.userdata.store, item_id:47395, customer_id:288956,description:"INGRESO LECHONES", name:lineas[linea].name}
 
 						//console.log(data)
 						for(let x=1;x<=lineas[linea].quantity;x++){
@@ -526,7 +526,17 @@ export default class CerdosNuevos extends Component {
 					
 					
 					 
-					<Table.Cell>Lechon
+					<Table.Cell>{<input
+					autoFocus
+                    type="text"
+					name="name"
+					id={"name_"+t.id}
+                    value={t.name}
+					onChange={this.handleInputChange}				
+					className="inputform"
+					placeholder="Lote"
+					
+				  />}
 				 
 				  </Table.Cell>
 				  <Table.Cell>{<input
