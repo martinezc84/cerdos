@@ -129,7 +129,7 @@ export default class CerdosNuevos extends Component {
 			let { action, comprables, vendibles  } = this.props;
 				let lineas=[]
 				
-				let linea = {id:1,name:"",quantity:0,reference:""}
+				let linea = {id:1,name:"",quantity:1,reference:""}
 				lineas.push(linea)
 		
 			this.setState ({
@@ -262,7 +262,7 @@ export default class CerdosNuevos extends Component {
 	agregar_item = () =>{
 		let id =this.state.insumoscont;
 		id++;
-		let linea = {id:id,name:"",quantity:0,reference:""}
+		let linea = {id:id,name:"",quantity:1,reference:""}
 		
 		let lineas = this.state.lineas;
 		lineas.push(linea)
@@ -548,6 +548,7 @@ export default class CerdosNuevos extends Component {
 					onChange={this.handleInputChangepeso}				
 					className="inputform"
 					placeholder="Cantidad"
+					readOnly
 					
 				  />}
 				 

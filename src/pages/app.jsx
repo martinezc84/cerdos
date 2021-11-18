@@ -60,17 +60,17 @@ export default class App extends Component {
 		let userdata={group_id:0}
 		
 		if(user==true){
-			userdata = getUser()
+			userdata = await getUser()
 			//console.log('cargando zauru')
 			let resp = await this.cargardatoszauru()
 			//console.log('cargando menu')
-			//console.log(this.getmem('menuitems'))
+			console.log(this.getmem('menuitems'))
 			if (this.getmem('menuitems')===undefined){
 				try{
 				let res = await  Axios.get(FUNCIONES.menus+'?id='+userdata.group_id)
 				
 					let data =res.data;
-					//console.log(data)
+					console.log(data)
 					this.setState({
 					menuitems : data,
 					show:true,
