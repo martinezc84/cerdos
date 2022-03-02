@@ -107,11 +107,22 @@ export default class FilaTransfer extends Component {
 			value={cantidad}
 			onChange={this.handleInputChange}
 			className="inputform"
-			onDoubleClick={() => {
-				pesar(id);
-			}}
+		
 		  />):('')}
-			
+			<Button
+								
+				primary
+				onClick={() => {
+					pesar(
+						id
+					);
+				}}								
+				icon
+				labelPosition="right"
+			>
+				<Icon name="download" />
+								pesar
+							</Button>
 			
 			</Table.Cell>
 			

@@ -1,6 +1,6 @@
 //@ts-check
 import React, { Component } from 'react';
-import { Table, Checkbox, Label, Input } from 'semantic-ui-react';
+import { Table, Button, Icon } from 'semantic-ui-react';
 
 export default class FilaDetalleCompraunico extends Component {
 
@@ -65,10 +65,19 @@ export default class FilaDetalleCompraunico extends Component {
 					onChange={this.handleInputChangepeso}				
 					className="inputform"
 					id={"eso_"+id_parent+"_"+id}
-					onDoubleClick={() => {
-						pesar("eso_"+id_parent+"_"+id);
-					}}
+					
                   />
+				  <Button
+								
+								primary
+								onClick={() => {
+									pesar("eso_"+id_parent+"_"+id);
+								}}								
+								icon
+								labelPosition="right"
+							><Icon name="download" />
+							pesar
+						</Button>
 					</Table.Cell>
 					
 				</Table.Row>
