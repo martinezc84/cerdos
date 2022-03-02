@@ -1,6 +1,6 @@
 //@ts-check
 import React, { Component } from 'react';
-import { Table, Checkbox, Label, Input } from 'semantic-ui-react';
+import { Table, Checkbox, Label, Icon } from 'semantic-ui-react';
 import FilaDetalle from './FilaDetalleCompraunico';
 export default class FilaDetalleCompra extends Component {
 
@@ -78,11 +78,19 @@ export default class FilaDetalleCompra extends Component {
 					id={id}
                     value={cantidad}
 					//onChange={this.handleInputChange}
-					onDoubleClick={() => {
-						pesar(id);
-					}}
+					
                     className="inputform"
                   />
+				  <Label as='a' color='blue' image onClick={() => {
+					pesar(
+						id
+					);
+				}}	>
+		   <Icon name="download" />
+			
+			<Label.Detail>Pesar</Label.Detail>
+			
+			</Label>
 					</Table.Cell>
 					{line.product_type==3 ? (
 					<Table.Cell>

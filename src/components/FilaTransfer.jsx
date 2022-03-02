@@ -1,6 +1,6 @@
 //@ts-check
 import React, { Component } from 'react';
-import { Table,  Button, Icon, Dropdown, Checkbox } from 'semantic-ui-react';
+import { Table,  Button, Icon, Dropdown, Label } from 'semantic-ui-react';
 
 export default class FilaTransfer extends Component {
 
@@ -109,20 +109,17 @@ export default class FilaTransfer extends Component {
 			className="inputform"
 		
 		  />):('')}
-			<Button
-								
-				primary
-				onClick={() => {
+		   <Label as='a' color='blue' image onClick={() => {
 					pesar(
 						id
 					);
-				}}								
-				icon
-				labelPosition="right"
-			>
-				<Icon name="download" />
-								pesar
-							</Button>
+				}}	>
+		   <Icon name="download" />
+			
+			<Label.Detail>Pesar</Label.Detail>
+			
+			</Label>
+			
 			
 			</Table.Cell>
 			
